@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Jeu</title>
+    <style type="text/css">
+        @import url("style.css");
+    </style>
+    <script src="heure.js"></script>
+</head>
+<body onload="printTime()">
+
+    <div class="container">
+        <div class="entete">
+            <div class="menu_principal">
+                <div class="btn-wos-vueGlobale"></div>
+                <div class="btn-wos-centreVille"></div>
+                <div class="btn-wos-carte"></div>
+                <div class="btn-wos-classement"></div>
+                <div class="btn-wos-aide"></div>
+                <div class="btn-wos-ameliorations"></div>
+                <div class="btn-wos-boutique"></div>
+                <div class="btn-wos-bonus"></div>
+            </div>
+            <div class="cadre_profil">
+                <div class="nom_profil">Nebulos</div>
+                <div class="profil_content">
+                    <div class="profil_content_titre">
+                        <div>Niveau</div>
+                        <div>Experience</div>
+                        <div>Habitants</div>
+                        <div>Points</div>
+                    </div>
+                    <div class="profil_content_valeur">
+                        <div>10</div>
+                        <div>15000/90000</div>
+                        <div>568</div>
+                        <div>1547</div>
+                    </div>
+                    <div>
+                        <img src="./images/ninjajpeg" width="80px" height="80px" alt="ninja"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cadre_ressources">
+            <div class="ressources_content">
+                <div class="ressources_content_value">
+                    <img src="./images/ressources/pictoRessNour.png" alt="nour"/>
+                    <div class="ressources_chiffre">
+                        5000 / 9999
+                    </div>
+                </div>
+                <div class="ressources_content_value">
+                    <img src="./images/ressources/pictoRessMetal.png" alt="metal"/>
+                    <div class="ressources_chiffre">
+                        5000 / 9999
+                    </div>
+                </div>
+                <div class="ressources_content_value">
+                    <img src="./images/ressources/pictoRessBois.png" alt="bois"/>
+                    <div class="ressources_chiffre">
+                        5000 / 9999
+                    </div>
+                </div>
+                <div class="ressources_content_value">
+                    <img src="./images/ressources/pictoRessRoche.png" alt="roche"/>
+                    <div class="ressources_chiffre">
+                        5000 / 9999
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cadre_info">
+            <div class="info_content">
+                <div>La bretagne</div>
+                <div id="horloge"></div>
+            </div>
+        </div>
+        <div class="cadre_vueGlobale_bureau_clan_production">
+            <div class="cadre_vueGlobale">
+                <div class="vueGlobale_titre">
+                    VUE GLOBALE
+                </div>
+                <div class="vueGlobale_image">
+                    <img src="./images/Fenetre/mapninja.png" style="margin-top: 50px;" alt="map ninja"/>
+                </div>
+                <div class="chantier_titre">
+                    CHANTIER
+                </div>
+                <div class="chantier_content">
+                    <div class="chantier_content_value">
+                        <img src="./images/Fenetre/logoMaison.png" width="38px" height="38px"/>
+                        <div id="typeChantier">Habitations</div>
+                        <div style="width: 320px;">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</div>
+                        <div id="timeRemaining">5h:23mn:45s</div>
+                    </div>
+                    <div class="chantier_content_value">
+                        <img src="./images/Fenetre/logoMaison.png" width="38px" height="38px"/>
+                        <div id="typeChantier">Habitations</div>
+                        <div>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</div>
+                        <div id="timeRemaining">5h:23mn:45s</div>
+                    </div>
+                </div>
+            </div>
+            <div class="cadre_bureau_clan_production">
+                <div class="cadre_bureau">
+                    <img src="./images/Fenetre/officenaruto.png" width="450px" height="300px" style="margin-top: 40px;margin-left: 20px;"/>
+                </div>
+                <div class="cadre_clan">
+                    <div class="clan_titre">
+                        CLAN
+                    </div>
+                    <div class="clan_detail">
+                        <div>
+                            <img src="./images/Fenetre/konoha.png" width="38px" height="38px"/>
+                        </div>
+                        <div class="clan_detail_value">
+                            <div class="clan_detail_nom">
+                                KONOHA
+                            </div>
+                            <div class="clan_detail_classement">
+                                <div class="clan_niveau">
+                                    Niveau 40
+                                </div>
+                                <div>/</div>
+                                <div class="clan_rang">
+                                    rang 10
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clan_avancement">
+                        <img src="./images/Fenetre/ElemClan/fondXP.png" alt="fond" class="avancement_fond"/>
+                        <img src="./images/Fenetre/ElemClan/barreXP.png" alt="xp" class="avancement_barre">
+                        <div class="avancement_value" style="position: absolute;">100%</div>
+                    </div>
+                </div>
+                <div class="cadre_production">
+                    <div class="production_titre">
+                        PRODUCTION
+                    </div>
+                    <div class="production_content">
+                        <div class="production_ligne">
+                            <img src="./images/ressources/pictoRessMetal.png"/>
+                            <div class="chiffre_gauche">25638</div>
+                            <div class="txt_indice" id="indice_production">+5</div>
+                            <div class="taux_heure">Taux / heure</div>
+                        </div>
+                        <div class="production_ligne">
+                            <img src="./images/ressources/pictoRessRoche.png"/>
+                            <div class="chiffre_gauche">25638</div>
+                            <div class="txt_indice" id="indice_production">+5</div>
+                            <div class="taux_heure">Taux / heure</div>
+                        </div>
+                        <div class="production_ligne">
+                            <img src="./images/ressources/pictoRessBois.png"/>
+                            <div class="chiffre_gauche">25638</div>
+                            <div class="txt_indice" id="indice_production">+5</div>
+                            <div class="taux_heure">Taux / heure</div>
+                        </div>
+                        <div class="production_ligne">
+                            <img src="./images/ressources/pictoRessNour.png"/>
+                            <div class="chiffre_gauche">25638</div>
+                            <div class="txt_indice" id="indice_production">+5</div>
+                            <div class="taux_heure" id="taux_nour">Taux / heure</div>
+                        </div>
+                        <div class="cadre_conso_nourriture">
+                            <div class="conso_titre">
+                                Consommation de nourriture
+                            </div>
+                            <div class="conso_value">
+                                <div class="conso_habitant">
+                                    <div class="habitant_titre">
+                                        Habitants :
+                                    </div>
+                                    <div class="habitant_value">
+                                        400 / heures
+                                    </div>
+                                </div>
+                                <div class="conso_habitant">
+                                    <div class="habitant_titre">
+                                        Ninjas :
+                                    </div>
+                                    <div class="ninja">
+                                        400 / heures
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cadre_puissance_tchat_allies">
+            <div class="cadre_puissance_tchat">
+                <div class="cadre_puissance">
+                    <div class="puissance_titre">
+                        <div>PUISSANCE</div>
+                    </div>
+                    <div class="puissance_content_value_cadre">
+                        <div class="puissance_content_value">
+                            <div>Ninja</div>
+                            <div>XXXX</div>
+                            <div>YYYY</div>
+                            <div>ZZZZ</div>
+                        </div>
+                        <div class="puissance_content_value">
+                            <div>Attaque</div>
+                            <div>9999</div>
+                            <div>9999</div>
+                            <div>9999</div>
+                        </div>
+                        <div class="puissance_content_value">
+                            <div>Defense</div>
+                            <div>9999</div>
+                            <div>9999</div>
+                            <div>9999</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cadre_tchat">
+                    <div class="tchat_titre">
+                        TCHAT
+                    </div>
+                    <div class="cadre_message_personneCo">
+                        <div class="cadre_message">
+                            <div class="message_systeme_tchat">Systeme: bienvenu sur le tchat de WoS</div>
+                            <div class="message_content_cadre">
+                                <div class="pseudo_message">
+                                    Jordan:
+                                </div>
+                                <div class="message_content">
+                                    Duis congue ullamcorper sollicitudin. Sed egestas ultrices pulvinar. Sed efficitur pretium commodo. Morbi bibendum est sit amet dapibus egestas. Cras eget mi quis tortor porttitor rhoncus. Mauris non tortor blandit, ullamcorper nulla eget, tincidunt massa. Maecenas tempor porttitor lorem at maximus. Phasellus vel ante id enim pulvinar interdum. Suspendisse commodo vel enim ut mattis.
+                                </div>
+                            </div>
+                            <div class="message_content_cadre">
+                                <div class="pseudo_message">
+                                    Jordan:
+                                </div>
+                                <div class="message_content">
+                                    Nam sit amet ipsum nec purus porta egestas ut id odio. Suspendisse finibus sagittis magna et aliquet. Duis ornare enim at eros facilisis volutpat. Morbi lobortis arcu sodales eros molestie dictum. Phasellus ullamcorper, neque vel iaculis varius, ipsum lorem aliquet neque, vitae finibus tortor diam a lorem. Mauris semper convallis ligula, eget placerat turpis luctus ac. Aliquam sagittis ex dolor, nec lacinia ante faucibus a. Aliquam pellentesque, dolor ac posuere sodales, urna augue iaculis est, tempus condimentum neque dui sed risus. Nunc laoreet mauris ac neque mattis, hendrerit dapibus ipsum convallis. Pellentesque pharetra elit ut leo pharetra scelerisque. Curabitur mollis ac purus id viverra. Nullam iaculis urna ut consequat dictum. Sed vitae accumsan nunc. Vestibulum vitae elementum tellus.
+                                </div>
+                            </div>
+                            <div class="message_content_cadre">
+                                <div class="pseudo_message">
+                                    Jordan:
+                                </div>
+                                <div class="message_content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae bibendum mi. In sodales iaculis rutrum. Proin fermentum dolor ac ornare sagittis. Donec interdum commodo leo, a blandit augue congue eget. Morbi placerat vestibulum magna, id ultricies metus pretium a. Phasellus rhoncus luctus hendrerit. Donec consequat feugiat sem ac suscipit. Aenean in ornare sapien, in mattis metus.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cadre_personneCo">
+                            <div class="content_personneCo">
+                                <img src="./images/ninjajpeg" width="38px" height="38px"/>
+                                <div>Georges Abitol</div>
+                            </div>
+                            <div class="content_personneCo">
+                                <img src="./images/ninjajpeg" width="38px" height="38px"/>
+                                <div>Georges Abitol</div>
+                            </div>
+                            <div class="content_personneCo">
+                                <img src="./images/ninjajpeg" width="38px" height="38px"/>
+                                <div>Georges Abitol</div>
+                            </div>
+                            <div class="content_personneCo">
+                                <img src="./images/ninjajpeg" width="38px" height="38px"/>
+                                <div>Georges Abitol</div>
+                            </div>
+                            <div class="content_personneCo">
+                                <img src="./images/ninjajpeg" width="38px" height="38px"/>
+                                <div>Georges Abitol</div>
+                            </div>
+                            <div class="content_personneCo">
+                                <img src="./images/ninjajpeg" width="38px" height="38px"/>
+                                <div>Georges Abitol</div>
+                            </div>
+                            <div class="content_personneCo">
+                                <img src="./images/ninjajpeg" width="38px" height="38px"/>
+                                <div>Georges Abitol</div>
+                            </div>
+                            <div class="content_personneCo">
+                                <img src="./images/ninjajpeg" width="38px" height="38px"/>
+                                <div>Georges Abitol</div>
+                            </div>
+                            <div class="content_personneCo">
+                                <img src="./images/ninjajpeg" width="38px" height="38px"/>
+                                <div>Georges Abitol</div>
+                            </div>
+                            <div class="content_personneCo">
+                                <img src="./images/ninjajpeg" width="38px" height="38px"/>
+                                <div>Georges Abitol</div>
+                            </div>
+                            <div class="content_personneCo">
+                                <img src="./images/ninjajpeg" width="38px" height="38px"/>
+                                <div>Georges Abitol</div>
+                            </div>
+                            <div class="content_personneCo">
+                                <img src="./images/ninjajpeg" width="38px" height="38px"/>
+                                <div>Georges Abitol</div>
+                            </div>
+                            <div class="content_personneCo">
+                                <img src="./images/ninjajpeg" width="38px" height="38px"/>
+                                <div>Georges Abitol</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cadre_message_to_send">
+                        <div class="debut_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="suite_cadre"></div>
+                        <div class="fin_cadre"></div>
+                        <div class="btn_send_message"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cadre_allies">
+                <div class="allies_titre">
+                    ALLIES
+                </div>
+                <div class="allies_content_cadre">
+                    <div class="allies_content_value" style="margin-top: 50px;">
+                        <img src="./images/ninjajpeg" width="38px" height="38px"/>
+                        <div>Georges Abitol</div>
+                    </div>
+                    <div class="allies_content_value">
+                        <img src="./images/ninjajpeg" width="38px" height="38px"/>
+                        <div>Georges Abitol</div>
+                    </div>
+                    <div class="allies_content_value">
+                        <img src="./images/ninjajpeg" width="38px" height="38px"/>
+                        <div>Georges Abitol</div>
+                    </div>
+                    <div class="allies_content_value">
+                        <img src="./images/ninjajpeg" width="38px" height="38px"/>
+                        <div>Georges Abitol</div>
+                    </div>
+                    <div class="allies_content_value">
+                        <img src="./images/ninjajpeg" width="38px" height="38px"/>
+                        <div>Georges Abitol</div>
+                    </div>
+                    <div class="allies_content_value">
+                        <img src="./images/ninjajpeg" width="38px" height="38px"/>
+                        <div>Georges Abitol</div>
+                    </div>
+                    <div class="allies_content_value">
+                        <img src="./images/ninjajpeg" width="38px" height="38px"/>
+                        <div>Georges Abitol</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

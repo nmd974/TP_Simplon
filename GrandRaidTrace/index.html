@@ -1,0 +1,130 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
+
+	<head>
+		<title>Tutoriel Google Maps</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<!-- Elément Google Maps indiquant que la carte doit être affiché en plein écran et
+		qu'elle ne peut pas être redimensionnée par l'utilisateur -->
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <!-- Inclusion de l'API Google MAPS 
+        
+            Sud: -21.2930944,55.4074775,11
+            Nord: -20.9980252,55.4428397,12
+            Ouest: -21.0549073,55.478202,10
+            Est :-21.0549073,55.478202,10
+        
+        -->
+		<!-- Le paramètre "sensor" indique si cette application utilise détecteur pour déterminer la position de l'utilisateur -->
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript">
+function initialiser() {
+	var latlng = new google.maps.LatLng(-21.1512095,55.3886774,10.25);
+	
+	var options = {
+		center: latlng,
+		zoom: 10,
+		mapTypeId: google.maps.MapTypeId.SATELLITE
+	};
+	
+	var carte = new google.maps.Map(document.getElementById("carte"), options);
+	
+	/****************Nouveau code****************/
+
+	//redéfinition du centre de la carte
+	carte.setCenter(new google.maps.LatLng(-21.1361456,55.434088,11));
+	//redéfinition du zoom
+	carte.setZoom(10);
+	
+	//chemin du tracé
+	var parcoursBus = [
+		new google.maps.LatLng(-21.3386061,55.4564224,17),
+		new google.maps.LatLng(-21.3122172,55.5436446,17),
+		new google.maps.LatLng(-21.2497172,55.5980891,17),
+		new google.maps.LatLng(-21.1619394,55.5689224,17),
+		new google.maps.LatLng(-21.1336061,55.4747557,17),
+		new google.maps.LatLng(-21.117495,55.4478113,17),
+        new google.maps.LatLng(-21.1038839,55.4311446,17),
+        new google.maps.LatLng(-21.0530506,55.451978,17),
+        new google.maps.LatLng(-21.039995,55.4239224,17),
+        new google.maps.LatLng(-21.0377728,55.4078113,17),
+        new google.maps.LatLng(-21.0686061,55.3972557,17),
+        new google.maps.LatLng(-21.0505506,55.3783669,17),
+        new google.maps.LatLng(-20.9723283,55.3226446,17),
+        new google.maps.LatLng(-20.9627728,55.3553113,17),
+        new google.maps.LatLng(-20.9388283,55.3290335,17),
+        new google.maps.LatLng(-20.8961061,55.3747557,17),
+        new google.maps.LatLng(-20.9061061,55.4228113,17),
+        new google.maps.LatLng(-20.8847172,55.4400335,17)
+	];
+
+    var ravitaillement = [
+		new google.maps.LatLng(-21.3386061,55.4564224,17),
+		new google.maps.LatLng(-21.3122172,55.5436446,17),
+		new google.maps.LatLng(-21.2497172,55.5980891,17),
+		new google.maps.LatLng(-21.1336061,55.4747557,17),
+		new google.maps.LatLng(-21.117495,55.4478113,17),
+        new google.maps.LatLng(-21.1038839,55.4311446,17),
+        new google.maps.LatLng(-21.0530506,55.451978,17),
+        new google.maps.LatLng(-21.039995,55.4239224,17),
+        new google.maps.LatLng(-21.0377728,55.4078113,17),
+        new google.maps.LatLng(-21.0686061,55.3972557,17),
+        new google.maps.LatLng(-20.9627728,55.3553113,17),
+        new google.maps.LatLng(-20.9388283,55.3290335,17),
+        new google.maps.LatLng(-20.9061061,55.4228113,17),
+        new google.maps.LatLng(-20.8847172,55.4400335,17)
+	];
+
+    	//création du marqueur
+	var marqueur = new google.maps.Marker({
+		position: ravitaillement,
+		map: carte,
+        icon: "./images/ravitaillement.png",
+        width: "16px",
+        height:"16px"
+	});
+
+    var marqueur1 = new google.maps.Marker({
+		position: new google.maps.LatLng(-21.1038839,55.4311446,17),
+		map: carte,
+        icon: "./images/ravitaillement.png",
+        width: "16px",
+        height:"16px"
+	});
+
+    var marqueur2 = new google.maps.Marker({
+		position: new google.maps.LatLng(-21.0686061,55.3972557,17),
+		map: carte,
+        icon: "./images/ravitaillement.png",
+        width: "16px",
+        height:"16px"
+	});
+
+    var marqueur3 = new google.maps.Marker({
+		position: new google.maps.LatLng(-20.8847172,55.4400335,17),
+		map: carte,
+        icon: "./images/ravitaillement.png",
+        width: "16px",
+        height:"16px"
+	});
+
+	
+	var traceParcoursBus = new google.maps.Polyline({
+		path: parcoursBus,//chemin du tracé
+		strokeColor: "#FFFFFF",//couleur du tracé
+		strokeOpacity: 1.0,//opacité du tracé
+		strokeWeight: 2//grosseur du tracé
+	});
+	
+	//lier le tracé à la carte
+	//ceci permet au tracé d'être affiché sur la carte
+	traceParcoursBus.setMap(carte);
+
+	/********************************************/
+}
+		</script>
+	</head>
+
+	<body onload="initialiser()">
+		<div id="carte" style="width:50%; height:50%"></div>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+.container{
+    display:flex;
+    flex-direction: column;
+}
+.container_titre{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 35px;
+}
+.tableau{
+    border-spacing: 0;
+    width: 100%;
+    border-collapse: collapse;
+
+}
+td{
+    border: 0.2px solid black;
+    text-align: center;
+    font-size: large;
+}
+.container_image{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.image{
+    width: auto;
+    height: 90px;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.nom_col{
+    font-weight: 700;
+    font-size: xx-large;
+}

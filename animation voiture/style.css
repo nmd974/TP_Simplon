@@ -1,0 +1,35 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wheel{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 82px;
+    margin-right: 10px;
+    width: 70%;
+}
+
+.roueArriere{
+    margin-right: 20px;
+    animation: rotateWheel 0.5s linear infinite;
+}
+
+.roueAvant{
+    margin-left: 10px;
+    animation: rotateWheel 0.5s linear infinite;
+}
+
+@keyframes rotateWheel{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+

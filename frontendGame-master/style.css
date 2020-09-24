@@ -1,0 +1,576 @@
+body{
+    background-image: url(./images/bg-principal/BGMontagnes.png);
+    background-repeat: no-repeat;
+    font-family: "Shojumaru-Regular", Helvetica, Arial, sans-serif;
+}
+.container{
+    background-image: url(./images/ensembleFond.png);
+    background-repeat: no-repeat;
+    width: 1689px;
+    height: 2552px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.menu_principal {
+    width: 844px;
+    height: 123px;
+    background-image: url(./images/menuTop/CadreMenu.png);
+    background-repeat: no-repeat;
+    margin-top: 60px;
+    margin-left: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.entete{
+    display: flex;
+    
+}
+
+.btn-wos-vueGlobale{
+    background-image: url(./images/menuTop/btnVueGlobale.png);
+    height: 97px;
+    background-repeat: none;
+    width: 102px;
+}
+.btn-wos-vueGlobale:hover{
+    background-image: url(./images/menuTop/btnVueGlobale\ MO.png);
+}
+
+.btn-wos-centreVille{
+    background-image: url(./images/menuTop/btnCentreVille.png);
+    height: 97px;
+    background-repeat: none;
+    width: 102px;
+}
+.btn-wos-centreVille:hover{
+    background-image: url(./images/menuTop/btnCentreVille\ MO.png);
+}
+
+.btn-wos-carte{
+    background-image: url(./images/menuTop/btnCarte.png);
+    height: 97px;
+    background-repeat: none;
+    width: 102px;
+}
+.btn-wos-carte:hover{
+    background-image: url(./images/menuTop/btnCarte\ MO.png);
+}
+
+.btn-wos-classement{
+    background-image: url(./images/menuTop/btnClassement.png);
+    height: 97px;
+    background-repeat: none;
+    width: 102px;
+}
+.btn-wos-classement:hover{
+    background-image: url(./images/menuTop/btnClassement\ MO.png);
+}
+
+.btn-wos-aide{
+    background-image: url(./images/menuTop/btnAide.png);
+    height: 97px;
+    background-repeat: none;
+    width: 102px;
+}
+.btn-wos-aide:hover{
+    background-image: url(./images/menuTop/btnAide\ MO.png);
+}
+
+.btn-wos-ameliorations{
+    background-image: url(./images/menuTop/btnAmelio.png);
+    height: 97px;
+    background-repeat: none;
+    width: 102px;
+}
+.btn-wos-ameliorations:hover{
+    background-image: url(./images/menuTop/btnAmelio\ MO.png);
+}
+
+.btn-wos-boutique{
+    background-image: url(./images/menuTop/btnBoutique.png);
+    height: 97px;
+    background-repeat: none;
+    width: 102px;
+}
+.btn-wos-boutique:hover{
+    background-image: url(./images/menuTop/btnBoutique\ MO.png);
+}
+
+.btn-wos-bonus{
+    background-image: url(./images/menuTop/btnBonus.png);
+    height: 97px;
+    background-repeat: none;
+    width: 102px;
+}
+.btn-wos-bonus:hover{
+    background-image: url(./images/menuTop/btnBonus\ MO.png);
+}
+
+.cadre_profil{
+    background-image: url(./images/CadreProfil/CadreProfil.png);
+    width: 335px;
+    height: 144px;
+    margin-top: 39px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nom_profil{
+    font-size: 16px;
+    font-family: "Verdana";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-top: 7px;
+}
+
+.profil_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 110px;
+}
+
+.profil_content_titre{
+    font-size: 12px;
+    font-family: "Verdana";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.profil_content_valeur{
+    font-size: 12px;
+    font-family: "Verdana";
+    color: rgb(255, 255, 255);
+    text-align: right;
+}
+.cadre_ressources{
+    background-image: url(./images/ressources/fond.png);
+    width: 1169px;
+    height: 103px;
+    margin-left: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ressources_content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 950px;
+}
+.ressources_content_value{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.ressources_chiffre{
+    font-size: 14px;
+    font-family: "Verdana";
+    color: rgb(14, 7, 0);
+    font-weight: bold;
+}
+
+.cadre_info{
+    background-image: url(./images/info/fondInfo.png);
+    width: 541px;
+    height: 67px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-left: 550px;
+}
+
+.info_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 190px;
+    margin-bottom: 10px;
+}
+
+.cadre_vueGlobale_bureau_clan_production{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 250px;
+}
+.cadre_vueGlobale{
+    background-image: url(./images/Fenetre/vue\ globale.png);
+    width: 724px;
+    height: 901px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.vueGlobale_titre{
+    font-size: 26px;
+    font-family: "Verdana";
+    color: rgb(32, 26, 22);
+    font-weight: bold;
+    margin-top: 8px;
+}
+.chantier_titre{
+    font-size: 22px;
+    font-family: "Verdana";
+    color: rgb(32, 26, 22);
+    font-weight: bold;
+    margin-top: 50px;
+    margin-left: 10px;
+    align-self: flex-start;
+}
+.chantier_content{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    width: 624px;
+    height: 100%;
+    margin-top: 10px;
+}
+.chantier_content_value{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cadre_bureau_clan_production{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cadre_bureau{
+    background-image: url(./images/Fenetre/Production.png);
+    width: 482px;
+    height: 352px;
+    
+}
+.cadre_clan{
+    background-image: url(./images/Fenetre/clan.png);
+    width: 478px;
+    height: 195px;
+    
+  font-size: 16px;
+  font-family: "Verdana";
+  color: rgb(32, 26, 22);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+}
+.clan_titre{
+    font-size: 22px;
+    font-family: "Verdana";
+    color: rgb(32, 26, 22);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+}
+.clan_detail{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 92px;
+    text-align: center;
+}
+.clan_avancement{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.avancement_fond{
+    position: relative;
+}
+.avancement_barre{
+    position: absolute;
+}
+.avancement_value{
+    position: absolute;
+    font-size: 14px;
+    font-family: "Verdana";
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.clan_detail_classement{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 150px;
+}
+.cadre_production{
+    background-image: url(./images/Fenetre/Production.png);
+    width: 482px;
+    height: 352px;
+}
+.production_titre{
+    font-size: 22px;
+    font-family: "Verdana";
+    color: rgb(32, 26, 22);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+}
+.production_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.production_ligne{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin-top: 12px;
+}
+.taux_heure{
+    font-size: 16px;
+    font-family: "Verdana";
+    color: rgb(32, 26, 22);
+    font-weight: bold; 
+}
+.cadre_conso_nourriture{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+}
+.conso_titre{
+    font-size: 22px;
+    font-family: "Verdana";
+    color: rgb(32, 26, 22);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.conso_value{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: 90%;
+    margin-top: 10px;
+}
+.conso_habitant{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    width: 90%;
+    margin-top: 5px;
+}
+.cadre_puissance_tchat_allies{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 250px;
+}
+.cadre_puissance_tchat{
+    display: flex;
+    flex-direction: column;
+}
+.cadre_puissance{
+    background-image: url(./images/Fenetre/puissance.png);
+    width: 729px;
+    height: 229px;
+}
+.puissance_titre{
+    font-size: 22px;
+    font-family: "Verdana";
+    color: rgb(32, 26, 22);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.puissance_content_value_cadre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.puissance_content_value{
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     margin-top: 30px;
+     width: 90%;
+}
+.cadre_tchat{
+    background-image: url(./images/Fenetre/tchat.png);
+    width: 729px;
+    height: 479px;
+}
+.tchat_titre{
+    font-size: 22px;
+    font-family: "Verdana";
+    color: rgb(32, 26, 22);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.cadre_message_personneCo{
+    display: flex;
+}
+.cadre_message{
+    width: 67%;
+    margin-left: 15px;
+    margin-top: 30px;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    overflow-x: scroll;
+}
+.message_systeme_tchat{
+    font-size: 12px;
+    font-family: "Verdana";
+    color: rgb(205, 0, 0);
+    font-weight: bold;
+    line-height: 1.2;
+}
+.pseudo_message{
+    font-size: 12px;
+    font-family: "Verdana";
+    color: rgb(3, 0, 131);
+    font-weight: bold;
+    line-height: 1.2;  
+}
+.message_content{
+    font-size: 12px;
+    font-family: "Verdana";
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.cadre_personneCo{
+    overflow-y: scroll;
+    height: 350px;
+    width: 220px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.content_personneCo{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.cadre_message_to_send{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 50px;
+}
+.debut_cadre{
+    background-image: url(./images/Fenetre/ElemChat/champTxtG.png);
+    width: 25px;
+    height: 47px;
+}
+.fin_cadre{
+    background-image: url(./images/Fenetre/ElemChat/champtxtD.png);
+    width: 25px;
+    height: 47px;
+}
+.suite_cadre{
+    background-image: url(./images/Fenetre/ElemChat/champtxt.png);
+    width: 11px;
+    height: 47px;
+}
+.btn_send_message{
+    background-image: url(./images/Fenetre//ElemChat/btnSendMail.png);
+    width: 97px;
+    height: 61px;
+}
+.btn_send_message:hover{
+    background-image: url(./images/Fenetre//ElemChat/btnSendMailMO.png);
+    width: 97px;
+    height: 61px;
+}
+
+.cadre_allies{
+    background-image: url(./images/Fenetre/ALLIES.png);
+    width: 482px;
+    height: 352px; 
+    align-self: flex-start;
+}
+.allies_titre{
+    font-size: 22px;
+    font-family: "Verdana";
+    color: rgb(32, 26, 22);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.allies_content_cadre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    height: 250px;
+    width: 90%;
+    margin-left: 45px;
+    margin-top: 20px;
+}
+.allies_content_value{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin-top: 20px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 52px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-image: url(./images/Fenetre/curseurAss.png); 
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    height: 52px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-image: url(./images/Fenetre/curseurAss.png); 
+    background-repeat: no-repeat;
+  }
