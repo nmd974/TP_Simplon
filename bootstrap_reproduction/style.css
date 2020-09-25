@@ -7,6 +7,22 @@ body{
     border: 1px solid black;
 } */
 
-a {
+/* a {
     color: blue;
+} */
+
+.img{
+    background-image: url(./images/footer.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footerxx{
+    background-image: url(./images/footer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    color: white;
+    opacity: 2;
 }
