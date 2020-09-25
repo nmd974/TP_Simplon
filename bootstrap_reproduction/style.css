@@ -3,13 +3,6 @@ body{
     padding: 0;
 }
 
-.landing{
-    background-image: url(./images/landingPage.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 677px;
-    color: white;
-}
 
 .footerxx{
     background-image: url(./images/footer.jpg);
@@ -19,12 +12,12 @@ body{
     height: 450px;
     color: white;
 }
-
-.masthead {
-    height: 100vh;
-    min-height: 500px;
+.headerxx{
     background-image: url(./images/landingPage.png);
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-  }
+    height: 100vh;
+    min-height: 500px;
+    color: white;
+}
