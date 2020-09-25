@@ -5,8 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>Bootstrap reproduction</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
 </head>
-<body>
+<body onload="loading()">
+    <div class="d-flex flex-column bd-highlight mb-5">
+    <!--NAVBAR-->
     
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light w-auto p-3">
+        <!-- <div class="d-flex justify-content-around"> -->
+            <a class="navbar-brand" href="#">Start bootstrap</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex justify-content-end collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            </div>
+        <!-- </div> -->
+      </nav>
+
+
+      <!--IMAGE LANDING PAGE-->
+      <div class="bd-highlight mt-5">
+        <div class="card bg-dark text-white w-100">
+            <img src="./images/landingPage.png" id="landingpage" class="card-img" style="height: 800px;" alt="...">
+            <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+              <h1 class="card-title">Landing Page</h1>
+              <h2 class="card-text">A Templated by Start Bootstrap</h2>
+            </hr class="w-75">
+              <div class="d-flex flex-row justify-content-around align-items-center w-45 p-3">
+                <button type="button" class="btn btn-light ml-4">TWITTER</button>
+                <button type="button" class="btn btn-light ml-4">GITHUB</button>
+                <button type="button" class="btn btn-light ml-4">LINKEDIN</button>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <!-- SECTIONS -->
+      <div class="d-flex flex-column justify-content-center align-items-center w-100 mt-1">
+        <!--SECTION 1-->
+        <div class="card w-75 d-flex flex-row justify-content-center align-items-center">
+            <div class="row no-gutters">
+                <div class="col-md-8 w-50">
+                    <div class="card-body">
+                        <h1 class="card-title">Death to the Stock Photo : </br> Special Thanks</h1>
+                        <p class="card-text">
+                            A special thanks to 
+                            <a>Death to the Stock Photo</a>
+                            for providing the photographs that you see in this template.
+                            Visite their web site to become a member.
+                        </p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img src="./images/ipad.png" class="card-img" alt="...">
+                </div>
+            </div>
+        </div>
+        <!--SECTION 2-->
+        <div class="card w-75 d-flex flex-row justify-content-center align-items-center">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="./images/imac.png" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8 w-50">
+                    <div class="card-body">
+                        <h1 class="card-title">3D Device Mockups </br> byPSDCovers</h1>
+                        <p class="card-text">
+                            Turn your 2D designs into high quality, 3D product shots in seconds using free Photoshop actions 
+                            <a>Death to the Stock Photo</a>
+                            for providing the photographs that you see in this template.
+                            Visite their web site to become a member.
+                        </p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--SECTION 3-->
+        <div class="card w-75 d-flex flex-row justify-content-center align-items-center">
+            <div class="row no-gutters">
+            <div class="col-md-8">
+                <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="./images/iphone.png" class="card-img" alt="...">
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    </div>
+
 </body>
 </html>
