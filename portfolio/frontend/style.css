@@ -1,0 +1,281 @@
+body{
+    background-color: rgb(31, 31, 31);
+}
+
+/*GENERAL*/
+h3.heading{
+    font-size: .9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: white;
+    letter-spacing: .5rem;
+}
+.heading-underline{
+    width: 2rem;
+    height: .2rem;
+    background-color: #ff7b00;
+    margin-right: 2rem;
+    margin-bottom: 1.5rem;
+}
+/*NAVBAR*/
+.navbar{
+    background:linear-gradient( #333333, rgb(42,42,42));
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: .1rem;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    color: white;
+    /* padding-top: .8rem; */
+}
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover{
+    color: #ff7b00;
+    text-decoration: underline;
+}
+/*HOME*/
+.landing {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: table;
+    z-index: -1;
+  }
+  .home-wrap {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .home-inner {
+    position: fixed;
+    display: table;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(./images/about.jpg);
+    filter: contrast(50%);
+  }
+
+.caption{
+    width: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 38%;
+    z-index: 1;
+    color: white;
+}
+.caption h1{
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    text-shadow: .1rem .1rem .8rem black;
+    padding-bottom: 1rem;
+}
+.caption h2{
+    font-size: 2rem;
+    text-shadow: .1rem .1rem .5rem black;
+    padding-bottom: 1.6rem;
+}
+.btn-lg{
+    border-width: medium;
+    border-radius: 0;
+    padding: .6rem 1.3rem;
+    font-size: 1.1rem;
+}
+
+
+/*About*/
+.about{
+    background-color: rgb(42, 42, 42);
+    padding: 5rem;
+    color: white;
+}
+.skills{
+    position: relative;
+    background-color: #333333;
+    padding: 20px 30px;
+    margin-bottom: 25px;
+}
+
+/*SERVICES*/
+.services{
+    background-color: #333333;
+    padding: 5rem;
+    color: white;
+}
+.services-card{
+    background-color: rgb(42, 42, 42);
+}
+
+/*RESUME*/
+.resume{
+    background-color: rgb(42, 42, 42);
+    padding: 5rem;
+    color: white;
+}
+.resume-card{
+    background-color: #333333;
+    border-left: #ff7b00 .2rem solid;
+    padding: .5rem;
+}
+.resume-icon{
+    margin-top: 1.2rem;
+}
+.heading-underline-resume{
+    width: 100%;
+    height: .2rem;
+    background-color: rgb(42, 42, 42);
+    margin-right: 2rem;
+    margin-bottom: 1.5rem;
+}
+.heading-underline-icon{
+    width: 25%;
+    height: .2rem;
+    background-color: #ff7b00;
+    margin-top: 1.5rem;
+}
+
+
+/*PORTFOLIO*/
+.portfolio{
+    background-color: #333333;
+    padding: .9rem;
+    color: white;
+}
+.portfolio-card{
+    background-color: rgb(42, 42, 42);
+}
+.btn-portfolio-group{
+    background-color: rgb(42, 42, 42);
+    border-radius: 15px;
+}
+
+/*STATISTIQUES*/
+.statistiques{
+    background-color: rgb(42, 42, 42);
+    padding: 5rem;
+    color: white;
+}
+.statistiques-card{
+    background-color: #333333;
+    border-left: #ff7b00 .2rem solid;
+    padding: .5rem;
+}
+.statistiques-icon{
+    margin-top: 1.2rem;
+}
+.heading-underline-statistiques{
+    width: 100%;
+    height: .2rem;
+    background-color: rgb(42, 42, 42);
+    margin-right: 2rem;
+    margin-bottom: 1.5rem;
+}
+/*TESTIMONIALS*/
+.testimonials{
+    background-color: #333333;
+    padding: 5rem;
+    color: white;
+}
+.portfolio-card{
+    background-color: rgb(42, 42, 42);
+}
+.btn-portfolio-group{
+    background-color: rgb(42, 42, 42);
+    border-radius: 15px;
+}
+.testimonials-img{
+    border-radius: 100%;
+    width: 111px;
+    height: 111px;
+}
+
+/*BLOG*/
+.blog{
+    background-color: rgb(42, 42, 42);
+    padding: 5rem;
+    color: white;
+}
+.blog-img{
+    position: absolute;
+    z-index: 1;
+    top: -20%;
+}
+.blog-card{
+    position: fixed;
+    z-index: 0;
+    background-image: url(./images/item-2.jpg);
+    position: fixed;
+    display: table;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+}
+
+/*CONTACT*/
+.contact{
+    background-color: #333333;
+    padding: 5rem;
+    color: white;
+}
+.heading-underline-contact{
+    width: 15%;
+    height: .2rem;
+    background-color: rgb(42, 42, 42);
+    margin-top: 1.5rem;
+    background-color: #ff7b00;
+}
+
+.footer{
+    background-color: rgb(42, 42, 42);
+    padding: 5rem;
+    color: white;
+}
+
+@media (max-width: 992px){
+    .caption h1{
+        font-size: 2.8rem;
+    }
+    .caption h2{
+        font-size: 1rem;
+    }
+    .caption{
+        top: 28%;
+    }
+    .about{
+        padding: 1.5rem;
+    }
+    .services{
+        padding: 1.5rem;
+    }
+    .portfolio{
+        padding: 1.5rem;
+    }
+    .resume{
+        padding: 1.5rem;
+    }
+    .contact{
+        padding: 1.5rem;
+    }
+    .blog{
+        padding: 1.5rem;
+    }
+    .testimonials{
+        padding: 1.5rem;
+    }
+    .statistiques{
+        padding: 1.5rem;
+    }
+}
