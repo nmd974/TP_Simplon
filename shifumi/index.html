@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShifumiGame</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+        </style> 
+    <style type="text/css">
+        @import url("style.css");
+    </style>
+    <script src="./gameLaunching.js"></script>
+
+    <script src="./user.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+   
+
+        <div class="menu">
+            <div class="startGame" onclick="startGame()">
+                START
+            </div>
+            <div class="resetGame" onclick="resetGame()">
+                RESET
+            </div>
+        </div>
+        <div>
+            <h1>Welcome to the shifumiGame</h1>
+        </div>
+        <div class="nomUser">
+            <h2 id="nomUser" class="content_Nom">Joueur 1</h2>
+            <h2 class="content_Nom">VS</h2>
+            <h2 class="content_Nom">IA</h2>
+        </div>
+        <div class="cadre_partie">
+            <h2 id="victoireSuiteJoueur" class="content_partie">Parties gagnées à la suite : 0</h2>
+            <h2 class="content_partie"></h2>
+            <h2 id="victoireSuiteIA" class="content_partie">Parties gagnées à la suite : 0</h2>
+        </div>
+        <div class="led">
+            <div class="led1">
+                <img src="./images/star_vide.png" id="etoileJoueur1" alt="etoile"/>
+                <img src="./images/star_vide.png" id="etoileJoueur2" alt="etoile"/>
+                <img src="./images/star_vide.png" id="etoileJoueur3" alt="etoile"/>
+            </div>
+            <div>
+                <h2 id="mancheShow">Waiting...</h2>
+            </div>
+            <div class="led2">
+                <img src="./images/star_vide.png" id="etoileIA1" alt="etoile"/>
+                <img src="./images/star_vide.png" id="etoileIA2" alt="etoile"/>
+                <img src="./images/star_vide.png" id="etoileIA3" alt="etoile"/>
+            </div>
+        </div>
+
+            <div class="container_jeu">
+                <div id="block__joueur" class="actionTypeUser" style="border: 10px solid #1F2A36;">
+                    <img src="images/waiting.jpg" id="choixJoueur" style="animation: clignotant 1s linear infinite;" class="actionImage" alt="action">
+                </div>
+                <div class="compteur">
+                    <h3  id="compteur" >VS</h3>
+                </div>
+                <div id="block__IA" class="actionTypeIA" style="border: 10px solid #1F2A36;">
+                    <img src="images/waiting.jpg" id="choixOrdinateur" style="animation: clignotant 1s linear infinite;" class="actionImage" alt="action">
+                </div>
+
+        </div>
+        <div class="container_choice">
+            <h2>Choose your action</h2>
+            <div class="action">
+                <div class="action_image_pierre" onclick="choixJoueur(1)">
+                    <img src="./images/pierre.png" class="action_choice_image" alt="pierre"/>
+                </div>
+                <div class="action_image_feuille" onclick="choixJoueur(2)">
+                    <img src="./images/feuille.png" class="action_choice_image" alt="feuille"/>
+                </div>
+                <div class="action_image_ciseaux" onclick="choixJoueur(3)">
+                    <img src="./images/ciseaux.png" class="action_choice_image" alt="ciseaux"/>
+                </div>
+            </div>
+    </div>
+    </div>
+
+
+</body>
+</html>

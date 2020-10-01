@@ -1,0 +1,242 @@
+.body{
+    margin: 0;
+    padding: 0;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 850px;
+    background-color:#667882;
+    margin-top: 25px;
+    border-radius: 17px;
+    box-shadow: 10px 15px rgb(66, 66, 66);
+
+    font-family: 'Lobster', cursive;
+    color: #D9EFF5;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+
+
+}
+
+.startGame{
+    color: white;
+    background-color: green;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7%;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+.resetGame{
+    color: white;
+    background-color: tomato;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7%;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+
+}
+
+.content_Nom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 232px;
+}
+.cadre_partie{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    background-color: #1F2A36;
+    border-radius: 10px;
+    font-size: small;
+}
+.content_partie{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 232px;
+    font-size: large;
+}
+
+.nomUser{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    background-color: #1F2A36;
+    border-radius: 10px;
+}
+
+.led{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 99px;
+
+    background-color: #C3D9E0;
+    border-radius: 10px;
+    color: #1F2A36;
+}
+
+.led1{
+    height: 99px;
+    width: 232px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.led2{
+    height: 99px;
+    width: 232px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 17px;
+}
+
+.place_jeu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.container_jeu{
+    display: flex;
+    justify-content: space-between  ;
+    align-items: center;
+    width: 70%;
+    height: 250px;
+
+
+    
+}
+
+
+.actionImage{
+    width: 200px;
+    height: 200px;
+}
+
+.action_choice_image{
+    width: 70%;
+    height: 140px;
+    border-radius: 17px;
+}
+
+.actionTypeIA{
+    height: 222px;
+    width: 222px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 17px;
+}
+
+.actionTypeUser{
+    height: 222px;
+    width: 222px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 17px;
+    
+}
+
+.compteur{
+    height: 111px;
+    width: 111px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    border-radius: 17px;
+    cursor: pointer;
+}
+
+.container_choice{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F2A36;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+    width: 70%;
+}
+
+.action{
+    height: 180px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;   
+    width: 100%; 
+    background-color: #040317;
+
+}
+
+.action_image_pierre{
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+}
+.action_image_ciseaux{
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+}
+.action_image_feuille{
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+}
+
+.action_image_feuille:hover,
+.action_image_ciseaux:hover,
+.action_image_pierre:hover{
+    opacity: 1;
+}
+
+

@@ -1,0 +1,86 @@
+function mazeRunner(maze, directions) {  
+for (let i = 0; i < maze.length; i++) {
+  for (let i2 = 0; i2 < maze[i].length; i2++) {
+    let place = maze[i][i2];
+      if (place === 2){
+        let action;
+        let i3 = 0;
+        //for (let i3 = 0; i3 <= directions.length; i3++) {
+          while(i3 <= directions.length - 1){
+            action = directions[i3];
+            i3++;
+            if (action === "N"){
+              place = maze[i - 1][i2];
+              i--;    
+              if(i2 < 0 || i > maze.length && place !== 3){
+                return "Dead";
+              }
+              if (place === 1){
+                return "Dead";
+              }
+              if(place === 3){
+                return "Finish";
+              }
+              if (i3 >= directions.length){
+                return "Lost";
+              }
+
+            }
+            if (action === "W"){
+              place = maze[i][i2-1];
+
+              i2--;
+              if(i2 < 0 || i > maze.length && place !== 3){
+                return "Dead";
+              }
+              if (place === 1){
+                return "Dead";
+              }
+              if(place === 3){
+                return "Finish";
+              }
+              if (i3 >= directions.length){
+                return "Lost";
+              }
+            }
+            if (action === "E"){
+              place = maze[i][i2 + 1];
+              i2++;
+             
+              if (place === 1){
+                return "Dead";
+              }
+              if(place === 3){
+                return "Finish";
+              }
+              if (i3 >= directions.length){
+                return "Lost";
+              }
+            }
+            if (action === "S"){
+              place = maze[i+1][i2];
+              i++;
+              
+              if (i2 < 0){
+                return "Dead";
+              }
+              if (i == maze.length-1){
+                return "Dead";
+              }
+              if (place === 1){
+                return "Dead";
+              }
+
+              if(place === 3){
+                return "Finish";
+              }
+              if (i3 >= directions.length){
+                return "Lost";
+              }
+            }
+      }
+    }
+      
+  }
+}
+}

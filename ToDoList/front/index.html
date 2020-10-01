@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>TO-DO List</title>
+</head>
+<body>
+    <div class="container-fluid">
+
+        <section>
+            <div class="row text-center align-items-center">
+                <div class="input-group input-group-lg col-lg-8 col-md-12 mt-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-lg">Tâche à réaliser :</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                </div>
+                <select class="custom-select col-lg-2 col-md-12 mt-3">
+                    <option selected>Sélectionner la priorite</option>
+                    <option value="1">Urgente</option>
+                    <option value="2">Non urgente</option>
+                </select>
+                <div class="col-lg-2 col-md-12 mt-3">
+                    <button type="button" class="btn btn-success">Ajouter une tâche</button>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="taskList">
+            <!-- <div class="row text-center border mt-3">
+                <div class="col-lg-1 col-md-12 bg-success text-success border">1
+                </div>
+                <div class="col-lg-10 col-md-12 text-left border" style="text-decoration: line-through;">
+                    Faire le wireframe de la todo list
+                </div>
+                <div class="custom-control custom-checkbox col-lg-1 col-md-12 border">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Terminer
+                    </label>
+                </div>
+            </div>
+            <div class="row text-center border mt-3">
+                <div class="col-lg-1 col-md-12 bg-danger text-danger">1
+                </div>
+                <div class="col-lg-9 col-md-12 text-left">
+                    Faire le wireframe de la todo list
+                </div>
+                <div class="custom-control custom-checkbox col-lg-2 col-md-12">
+                    <input type="checkbox" class="custom-control-input" id="customCheck2">
+                    <label class="custom-control-label" for="customCheck2">Terminer
+                    </label>
+                </div>
+            </div>
+            <div class="row text-center border mt-3">
+                <div class="col-lg-1 col-md-12 bg-success text-success">1
+                </div>
+                <div class="col-lg-9 col-md-12 text-left">
+                    Faire le wireframe de la todo list
+                </div>
+                <div class="custom-control custom-checkbox col-lg-2 col-md-12">
+                    <input type="checkbox" class="custom-control-input" id="customCheck3">
+                    <label class="custom-control-label" for="customCheck3">Terminer
+                    </label>
+                </div>
+            </div>
+            <div class="row text-center border mt-3">
+                <div class="col-lg-1 col-md-12 bg-success text-success">1
+                </div>
+                <div class="col-lg-9 col-md-12 text-left">
+                    Faire le wireframe de la todo list
+                </div>
+                <div class="custom-control custom-checkbox col-lg-2 col-md-12">
+                    <input type="checkbox" class="custom-control-input" id="customCheck4">
+                    <label class="custom-control-label" for="customCheck4">Terminer
+                    </label>
+                </div>
+            </div> -->
+        
+        </section>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
