@@ -2,5 +2,17 @@
     {"id": "1", "task": "Faire le wireframe de la todo list", "urgent": true, "end": true},
     {"id": "2", "task": "Faire le template en HTML", "urgent": false, "end": true},
     {"id": "3", "task": "Faire le  template json", "urgent": true, "end": true},
-    {"id": "3", "task": "Faire le jQuery", "urgent": false, "end": false}
+    {"id": "4", "task": "Faire le jQuery1", "urgent": false, "end": false},
+    {"id": "5", "task": "Faire le jQuery2", "urgent": false, "end": false},
+    {"id": "6", "task": "Faire le jQuery3", "urgent": false, "end": false},
+    {"id": "7", "task": "Faire le jQuery4", "urgent": false, "end": false},
+    {"id": "8", "task": "Faire le jQuery5", "urgent": false, "end": false},
+    {"id": "9", "task": "Faire le jQuery6", "urgent": false, "end": false},
+    {"id": "10", "task": "Faire le jQuery7", "urgent": false, "end": false},
+    {"id": "11", "task": "Faire le jQuery8", "urgent": false, "end": false},
+    {"id": "12", "task": "Faire le jQuery9", "urgent": false, "end": false},
+    {"id": "13", "task": "Faire le jQuery10", "urgent": false, "end": false},
+    {"id": "14", "task": "Faire le jQuery11", "urgent": false, "end": false},
+    {"id": "15", "task": "Faire le jQuery12", "urgent": false, "end": false},
+    {"id": "16", "task": "Faire le jQuery13", "urgent": false, "end": false}
 ]
