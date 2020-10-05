@@ -3,16 +3,20 @@ body{
     padding: 0;
     color: white;
     /* background-color: black; */
-    /* background-size: cover;
+    /* background-size: center;
     background-position: center center;
+    background-repeat: no-repeat;
     background-image: url(./background.jpg);
     width: 100%;
     height: 100%; */
+    font-family: 'David Libre', serif;
 }
 
 section{
     margin: 0;
     padding: 1rem;
+    font-family: 'David Libre', serif;
+    /* color: white; */
 }
 
 .priorite{
