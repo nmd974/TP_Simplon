@@ -1,15 +1,23 @@
 //Mise à jour de la ligne de la tâche en barrant le contenu////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 $("#taskList").on("click", "input", async function() {
 
-    //Mise à jour de la BDD
+    // //Mise à jour de la BDD
       
-      let response = await fetch(`https://progest-nmd974.herokuapp.com/api/taskmanager/${this.id}`, {
-        method: 'PATCH',
-        });
+    //   let response = await fetch(`https://progest-nmd974.herokuapp.com/api/taskmanager/${this.id}`, {
+    //     method: 'PATCH',
+    //     });
 
     //Mise à jour de l'array déjà chargé
     const index = data_doc.findIndex(elt => elt._id === this.id);
-    data_doc[index].end = true;
+
+    if(data_doc[index].end === true){
+        data_doc[index].end = false;
+    }else{
+        data_doc[index].end = true;
+    }
+    
+    localStorage.removeItem('data'); //On supprime l'ancien tableau pour ajouter le nouveau avec les modifications
+    localStorage.setItem('data', JSON.stringify(data_doc));
 
     //Suppression des anciennes tâches
     for (let i = 0; i < data_doc.length; i++) {
@@ -36,9 +44,10 @@ $("#taskList").on("click", "input", async function() {
                     ${data_doc[i2].task}
                 </div>
                 <div class="custom-control custom-checkbox col-lg-1 col-md-12 border">
-                    <input type="checkbox" class="custom-control-input" id="${data_doc[i2]._id}" ${!data_doc[i2].end ? "": "checked disabled"}>
+                    <input type="checkbox" class="custom-control-input" id="${data_doc[i2]._id}" ${!data_doc[i2].end ? "": "checked"}>
                     <label class="custom-control-label" for="${data_doc[i2]._id}">${!data_doc[i2].end ? "Terminer" : "Terminée"}
                     </label>
+                    <i class="fa fa-trash-o ml-2" aria-hidden="true" id="trash${data_doc[i2]._id}"></i>
                 </div>
             </div>
             `); 

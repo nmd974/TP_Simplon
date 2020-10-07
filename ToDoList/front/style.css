@@ -16,11 +16,15 @@ section{
     margin: 0;
     padding: 1rem;
     font-family: 'David Libre', serif;
-    /* color: white; */
+    color: white;
 }
 
 .priorite{
     background-color: green;
     color: green;
 
+}
+
+.fa{
+    cursor: pointer;
 }

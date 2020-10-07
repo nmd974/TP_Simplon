@@ -17,8 +17,9 @@ $("#pagination").on("click", "li", function() {
     }
     if(Number(this.id) < page_actuelle){
         $(`#${this.id}`).addClass('active');
-        $(`#${Number(this.id) + test}`).removeClass('page-item active');
-        $(`#${Number(this.id) + test}`).addClass('page-item');
+        var indice = page_actuelle - Number(this.id);
+        $(`#${Number(this.id) + indice}`).removeClass('page-item active');
+        $(`#${Number(this.id) + indice}`).addClass('page-item');
         page_actuelle=Number(this.id);
         compteur = (Number(this.id) * nb_by_page)-nb_by_page;
     }
@@ -69,6 +70,7 @@ $("#pagination").on("click", "li", function() {
                     <input type="checkbox" class="custom-control-input" id="${data_doc[i2]._id}" ${!data_doc[i2].end ? "": "checked disabled"}>
                     <label class="custom-control-label" for="${data_doc[i2]._id}">${!data_doc[i2].end ? "Terminer" : "Terminée"}
                     </label>
+                    <i class="fa fa-trash-o ml-2" aria-hidden="true" id="trash${data_doc[i2]._id}"></i>
                 </div>
             </div>
             `); 

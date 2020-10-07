@@ -1,5 +1,18 @@
-//LANCEMENT ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-$(document).ready( async function chargement() {
+//Mise à jour de la ligne de la tâche en barrant le contenu////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$("#taskList").on("click", "i", async function() {
+
+    //Suppression des anciennes tâches
+    for (let i = 0; i < data_doc.length; i++) {
+        const element = data_doc[i]._id;
+        $(`#${element}container`).remove();
+    }
+
+    //Suppression de l'ancienne pagination
+    $(`#previous`).remove();
+    $(`#next`).remove();
+    for (let i = 0; i < page_totale + 1; i++) {
+        $(`#${i}`).remove();
+    }
 
     $('#taskList').append(`<div class="text-center" id="spinner">
     <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
@@ -9,21 +22,24 @@ $(document).ready( async function chargement() {
     <span class="sr-only">Loading...</span>
   </div>
                             </div>`)
+    //Mise à jour de l'array déjà chargé
+    const data_doc_temp = [...data_doc];
+    console.log(typeof this.id);
+    console.log(data_doc);
+    data_doc = data_doc_temp.filter(elt => elt._id != this.id);
+    console.log(data_doc);
+    localStorage.removeItem('data'); //On supprime l'ancien tableau pour ajouter le nouveau apres la suppression
+    localStorage.setItem('data', JSON.stringify(data_doc));
 
-    // let response = await fetch("https://progest-nmd974.herokuapp.com/api/taskmanager", {
-    // method: 'GET',
-    // });
 
-    // let result = await response.json();
-    // data_doc = result.data;
 
-    data_doc = localStorage.getItem('data') ? JSON.parse(localStorage.getItem('data')) : [];
-    id = data_doc.length;
+    // compteur = (page_actuelle * nb_by_page) - nb_by_page;
+
+    //Modification des nouvelles tâches
     if(data_doc.length !== 0){
         $('#spinner').remove();
-        $('#tacheazero').remove();
+        // $('#tacheazero').remove();
         data_doc.reverse();
-        console.log(data_doc);
         data_doc.forEach(tache => {
             
             if(compteur === 0 && nb_page === 0){
@@ -87,6 +103,5 @@ $(document).ready( async function chargement() {
         </div>
         `); 
     }
-    
-})
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+});
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
