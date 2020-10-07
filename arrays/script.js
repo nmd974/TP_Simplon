@@ -1,7 +1,7 @@
 var array1 = [4,8,7,9,1,5,4,6];
 var array2 = [7,6,5,2,1,3,7,4];
 var arrayRendu = [];  
-var listItem = document.createElement('div');
+var listItem = document.createElement('tr');
 
 $(document).ready(function loading(params) {
     for (let i = 0; i < array1.length; i++) {
@@ -11,13 +11,13 @@ $(document).ready(function loading(params) {
     }
 
     arrayRendu.forEach(element => {
-        var divToAdd = document.createElement('DIV');
+        var divToAdd = document.createElement('th');
         divToAdd.innerHTML = element;
         console.log(divToAdd);
         listItem.appendChild(divToAdd);
         
     });
-    listItem.className='container';
+
     $('#container').append(listItem);
 })
 
