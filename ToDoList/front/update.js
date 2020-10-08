@@ -1,11 +1,6 @@
 //Mise à jour de la ligne de la tâche en barrant le contenu////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 $("#taskList").on("click", "input", async function() {
 
-    // //Mise à jour de la BDD
-      
-    //   let response = await fetch(`https://progest-nmd974.herokuapp.com/api/taskmanager/${this.id}`, {
-    //     method: 'PATCH',
-    //     });
 
     //Mise à jour de l'array déjà chargé
     const index = data_doc.findIndex(elt => elt._id === this.id);

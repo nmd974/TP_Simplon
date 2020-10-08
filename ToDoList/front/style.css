@@ -28,3 +28,19 @@ section{
 .fa{
     cursor: pointer;
 }
+.buttonSelection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 17px;
+}
+
+@media(max-width: 768px){
+    .buttonSelection{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+}

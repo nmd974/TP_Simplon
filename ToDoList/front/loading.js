@@ -10,12 +10,6 @@ $(document).ready( async function chargement() {
   </div>
                             </div>`)
 
-    // let response = await fetch("https://progest-nmd974.herokuapp.com/api/taskmanager", {
-    // method: 'GET',
-    // });
-
-    // let result = await response.json();
-    // data_doc = result.data;
 
     data_doc = localStorage.getItem('data') ? JSON.parse(localStorage.getItem('data')) : [];
     id = data_doc.length;
