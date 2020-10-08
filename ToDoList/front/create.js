@@ -125,6 +125,7 @@ $('#newTask').on('click', 'button', async function() {
                 compteur = 0;
                 compteur_doc = 0;
                 fin = true;
+                $('#tacheazero').remove();
             }
             if(compteur === nb_by_page && nb_page >= 1 && !fin){
                 nb_page++;

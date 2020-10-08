@@ -14,8 +14,8 @@ $(document).ready( async function chargement() {
     data_doc = localStorage.getItem('data') ? JSON.parse(localStorage.getItem('data')) : [];
     id = data_doc.length;
     if(data_doc.length !== 0){
-        $('#spinner').remove();
-        $('#tacheazero').remove();
+        
+        
         data_doc.reverse();
         console.log(data_doc);
         data_doc.forEach(tache => {
@@ -62,6 +62,7 @@ $(document).ready( async function chargement() {
                 compteur = 0;
                 compteur_doc = 0;
                 fin = true;
+                $('#spinner').remove();
             }
 
             if(compteur === nb_by_page && nb_page >= 1 && !fin){
@@ -75,6 +76,7 @@ $(document).ready( async function chargement() {
         });
     }else{
         $('#spinner').remove();
+        $('#tacheazero').remove();
         $('#taskList').append(`
         <div class="row col-12 d-flex justify-content-center align-items-center text-center mt-3" id="tacheazero">
             <p>Aucune tâche disponible</p>
@@ -84,3 +86,6 @@ $(document).ready( async function chargement() {
     
 })
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$('#home').on('click', function () {
+    location.reload();
+})
