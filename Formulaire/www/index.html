@@ -12,16 +12,16 @@
             <h1>Event registration form</h1>
         </div>
 
-        <form action="" class="formulaire">
+        <form novalidate class="formulaire">
             <div class="formWidget">
                 <label for="name" class="labelSpecial">Name</label>
                     <div class="labelFirstName">
                         <label class="greyLabel" for="firstname">First name</label>
-                        <input type="text" id="firstname" name="first_name">
+                        <input type="text" id="firstname" name="first_name" required>
                     </div>
                     <div class="labelLastName">
                         <label class="greyLabel" for="lastname">Last name</label>
-                        <input class="littleInput" type="text" id="lastname" name="last_name">
+                        <input type="text" id="lastname" name="last_name" required>
                     </div>
             </div>
             <div class="formWidget">
@@ -30,42 +30,47 @@
             </div>
             <div class="formWidget">
                 <label for="email">Email</label>
-                <input type="email" id="email">
+                <input type="email" id="email" required>
+
             </div>
+            <p class="errorMail">Votre email n'est pas valide</p>
             <div class="formWidget">
                 <label for="name" class="labelSpecial">Phone</label>
                     <div class="labelArea">
                         <label class="greyLabel" for="areaZone">Area zone</label>
-                        <input type="text" id="areaZone" name="areaZone">
+                        <input type="text" id="areaZone" name="areaZone" required>
                     </div>
                     <div class="labelPhoneNumber">
                         <label class="greyLabel" for="phone_number">Phone number</label>
-                        <input type="tel" id="phone_number" name="phone_number">
+                        <input type="tel" id="phone_number" name="phone_number" required>
                     </div>
             </div>
             <div class="formWidget">
                 <label for="subject">Subject</label>
-                <select name="subject" id="subject">
-                    <option value="Choose subject">Choose subjet</option>
+                <select name="subject" id="subject" required>
+                    <option value="Choose subject">Choose subject</option>
                     <option value="XXXX">XXXX</option>
                     <option value="YYYY">YYYY</option>
                     <option value="ZZZZ">ZZZZ</option>
                 </select>
             </div>
-            <div class="radioList">
+            <div class="radioList" id="radioCustomer">
                 <p>Are you an existing customer ?</p>
                 <div class="optionRadio">
-                    <input type="radio" class="radioStyle" id="yes" name="existing_customer" value="Yes">
+                    <input type="radio" class="radioStyle" id="yes" name="existing_customer" value="Yes" required>
                     <label class="radioLabel" for="yes">Yes</label>
-                    <input type="radio" class="radioStyle" id="no" name="existing_customer" value="No">
+                    <input type="radio" class="radioStyle" id="no" name="existing_customer" value="No" required>
                     <label class="radioLabel" for="no">No</label>
                 </div>
 
             </div>
             <div class="button">
-                <button type="submit" >Register</button>
+                <button type="button" id="register">Register</button>
             </div>
         </form>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+
 </body>
 </html>
