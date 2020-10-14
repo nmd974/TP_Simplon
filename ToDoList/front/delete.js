@@ -55,13 +55,13 @@ $("#taskList").on("click", "i", async function() {
                 <div class="col-lg-1 col-md-12 ${!tache.urgent ? "bg-success" : "bg-danger"} ${!tache.urgent ? "text-success" : "text-danger"} 
                 border"
                 > 1</div>
-                <div class="col-lg-10 col-md-12 text-left border" 
+                <div class="col-lg-9 col-md-12 text-left border" 
                 id="${tache._id}div" 
                 style="text-decoration: ${!tache.end ? "none" : "line-through"};"
                 >
                 ${tache.task}
                 </div>
-                <div class="custom-control custom-checkbox col-lg-1 col-md-12 d-flex justify-content-center align-items-center border">
+                <div class="custom-control custom-checkbox col-lg-2 col-md-12 d-flex justify-content-center align-items-center border">
                 <input type="checkbox" class="custom-control-input" id="${tache._id}" ${!tache.end ? "": "checked"}>
                 <label class="custom-control-label" for="${tache._id}">${!tache.end ? "Terminer" : "Terminée"}
                 

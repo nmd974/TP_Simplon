@@ -55,13 +55,13 @@ $('#searchBarre').on('change', function () {
                 <div class="col-lg-1 col-md-12 ${!tache.urgent ? "bg-success" : "bg-danger"} ${!tache.urgent ? "text-success" : "text-danger"} 
                 border"
                 > 1</div>
-                <div class="col-lg-10 col-md-12 text-left border" 
+                <div class="col-lg-9 col-md-12 text-left border" 
                 id="${tache._id}div" 
                 style="text-decoration: ${!tache.end ? "none" : "line-through"};"
                 >
                 ${tache.task}
                 </div>
-                <div class="custom-control custom-checkbox col-lg-1 col-md-12 d-flex justify-content-center align-items-center border">
+                <div class="custom-control custom-checkbox col-lg-2 col-md-12 d-flex justify-content-center align-items-center border">
                 <input type="checkbox" class="custom-control-input" id="${tache._id}" ${!tache.end ? "": "checked"}>
                 <label class="custom-control-label" for="${tache._id}">${!tache.end ? "Terminer" : "Terminée"}
                 
@@ -113,15 +113,17 @@ $('#searchBarre').on('change', function () {
 })
 
 $('#searchButton').on('click', function () {
-            //Suppression des anciennes tâches
-            for (let i = 0; i < data_search.length; i++) {
-                const element = data_search[i]._id;
-                $(`#${element}container`).remove();
-            }
-            data_search = [];
+        //Suppression des anciennes tâches
+        for (let i = 0; i < data_search.length; i++) {
+            const element = data_search[i]._id;
+            $(`#${element}container`).remove();
+        }
+        
+        data_search = [];
+
         for (let i = 0; i < data_doc.length; i++) {
             const element = data_doc[i].task;
-            
+            console.log($('#searchBarre').val())
             if(element.includes($('#searchBarre').val())){
                 data_search.push(data_doc[i]);
             }
@@ -168,13 +170,13 @@ $('#searchButton').on('click', function () {
                     <div class="col-lg-1 col-md-12 ${!tache.urgent ? "bg-success" : "bg-danger"} ${!tache.urgent ? "text-success" : "text-danger"} 
                     border"
                     > 1</div>
-                    <div class="col-lg-10 col-md-12 text-left border" 
+                    <div class="col-lg-9 col-md-12 text-left border" 
                     id="${tache._id}div" 
                     style="text-decoration: ${!tache.end ? "none" : "line-through"};"
                     >
                     ${tache.task}
                     </div>
-                    <div class="custom-control custom-checkbox col-lg-1 col-md-12 d-flex justify-content-center align-items-center border">
+                    <div class="custom-control custom-checkbox col-lg-2 col-md-12 d-flex justify-content-center align-items-center border">
                     <input type="checkbox" class="custom-control-input" id="${tache._id}" ${!tache.end ? "": "checked"}>
                     <label class="custom-control-label" for="${tache._id}">${!tache.end ? "Terminer" : "Terminée"}
                     

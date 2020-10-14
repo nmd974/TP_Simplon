@@ -32,13 +32,13 @@ $("#taskList").on("click", "input", async function() {
                 <div class="col-lg-1 col-md-12 ${!data_doc[i2].urgent ? "bg-success" : "bg-danger"} ${!data_doc[i2].urgent ? "text-success" : "text-danger"} 
                     border"
                 > 1</div>
-                <div class="col-lg-10 col-md-12 text-left border" 
+                <div class="col-lg-9 col-md-12 text-left border" 
                     id="${data_doc[i2]._id}div" 
                     style="text-decoration: ${!data_doc[i2].end ? "none" : "line-through"};"
                 >
                     ${data_doc[i2].task}
                 </div>
-                <div class="custom-control custom-checkbox col-lg-1 col-md-12 border">
+                <div class="custom-control custom-checkbox col-lg-2 col-md-12 border">
                     <input type="checkbox" class="custom-control-input" id="${data_doc[i2]._id}" ${!data_doc[i2].end ? "": "checked"}>
                     <label class="custom-control-label" for="${data_doc[i2]._id}">${!data_doc[i2].end ? "Terminer" : "Terminée"}
                     </label>
