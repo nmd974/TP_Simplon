@@ -8,17 +8,20 @@
 </head>
 <body>
     <div class="container">
-        <h1>Event registration form</h1>
-        <form action="">
+        <div class="titre">
+            <h1>Event registration form</h1>
+        </div>
+
+        <form action="" class="formulaire">
             <div class="formWidget">
                 <label for="name">Name :</label>
-                    <div class="labelName">
+                    <div class="labelFirstName">
                         <label for="firstname">First name</label>
                         <input type="text" id="firstname" name="first_name">
                     </div>
-                    <div class="labelName">
+                    <div class="labelLastName">
                         <label for="lastname">Last name</label>
-                        <input type="text" id="lastname" name="last_name">
+                        <input class="littleInput" type="text" id="lastname" name="last_name">
                     </div>
             </div>
             <div class="formWidget">
@@ -33,7 +36,7 @@
                 <label for="name">Phone :</label>
                     <div class="labelArea">
                         <label for="areaZone">Area zone</label>
-                        <input type="text" id="areaZone" name="areaZone">
+                        <input class="littleInputArea" type="text" id="areaZone" name="areaZone">
                     </div>
                     <div class="labelPhoneNumber">
                         <label for="phone_number">Last name</label>
@@ -49,12 +52,15 @@
                 </select>
             </div>
             <div class="radioList">
+                <p>Are you an existing client ?</p>
                 <input type="radio" id="yes" name="existing_customer" value="Yes">
                 <label for="yes">Yes</label>
                 <input type="radio" id="no" name="existing_customer" value="No">
                 <label for="no">No</label>
             </div>
-
+            <div class="button">
+                <button type="submit" >Registrer</button>
+            </div>
         </form>
     </div>
 </body>

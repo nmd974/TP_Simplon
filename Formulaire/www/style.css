@@ -6,7 +6,11 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: grey;
+    background-image: linear-gradient(to bottom left, #9b38fc, #2795ed);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 937px;
+    font-family: 'Times New Roman', Times, serif;
 }
 h1{
     background-color: black;
@@ -15,30 +19,61 @@ h1{
     width: 100%;
     text-transform: uppercase;
 }
+input{
+    height: 50px;
+    border-radius: 7px;
+    background-color: rgb(233, 233, 233);
+}
 .container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 800px;
+    width: 800px;    
     height: auto;
-    border: 1px solid black;
+    background-color: white;
+    border-radius: 10px;
+}
+.formulaire{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 .formWidget{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 5%;
+    width: 90%;
+}
+.formWidget > input{
+    width: 80%;
+}
+.titre{
+    background-color: black;
+    width: 100%;
 }
 
-.labelName{
+.labelFirstName{
     display: flex;
     flex-direction: column-reverse;
+    width: 40%;
+}
+.labelLastName{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 40%;
 }
 .labelArea{
     display: flex;
     flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 .labelPhoneNumber{
     display: flex;
     flex-direction: column-reverse;
 }
+
