@@ -10,7 +10,7 @@ body{
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     background-image: linear-gradient(to bottom left, #9b38fc, #2795ed);
     background-position: center;
@@ -23,7 +23,8 @@ h1{
     color: white;
     width: 100%;
     text-transform: uppercase;
-    font-size: x-large;
+    font-size: 22px;
+    margin: 25px 0 25px 0;
 }
 input{
     height: 35px;
@@ -49,22 +50,22 @@ label{
     height: auto;
     background-color: white;
     border-radius: 1rem;
+    margin-top: 50px;
 }
 .formulaire{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px;
     width: 77%;
-    /* margin: 10px; */
+    margin-top: 5px;
 }
 .formWidget{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 35px;
 }
 .formWidget > label{
     width: 20%;
@@ -72,6 +73,9 @@ label{
 }
 .formWidget > input{
     width: 80%;
+}
+.labelSpecial{
+    margin-top: -15px;
 }
 .titre{
     background-color: black;
@@ -102,13 +106,12 @@ label{
     margin-left: 10px;
 }
 .greyLabel{
-    color: grey;
+    color: rgb(211, 211, 211);
     font-size: 12px;
     margin-top: 5px;
 }
 select{
     height: 35px;
-    border-radius: 7px;
     background-color: #e5e5e5;
     border: none;
     color: grey;
@@ -118,7 +121,7 @@ select{
 }
 .radioList{
     text-align: left;
-    margin-bottom: 10px;
+
     margin-top: 40px;
 }
 .radioList>p{
@@ -139,21 +142,17 @@ select{
 }
 
 button{
-    background-color: #ff4b5a;
+    background-color: #e93342;
     color: white;
     padding: 1rem;
-    border-radius: 7px;
+    border-radius: 4px;
     width: 150px;
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin-top: 25px;
+    margin-bottom: 70px;
     border: none;
-}
-.radioStyle{
-    background-color: green;
-    color: greenyellow;
 }
 
 input[type='radio']:after {
@@ -181,5 +180,5 @@ input[type='radio']:checked:after {
     content: '';
     display: inline-block;
     visibility: visible;
-    border: 2px solid white;
+    border: 2px solid #e5e5e5;
 }
