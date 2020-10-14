@@ -1,7 +1,13 @@
 /*Color : mauve : #9b38fc bleu :#2795ed*/
+html{
+    height: 100%;
+    width: 100%;
+}
 body{
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,7 +15,6 @@ body{
     background-image: linear-gradient(to bottom left, #9b38fc, #2795ed);
     background-position: center;
     background-repeat: no-repeat;
-    height: 937px;
     font-family: 'Times New Roman', Times, serif;
 }
 h1{
@@ -18,35 +23,52 @@ h1{
     color: white;
     width: 100%;
     text-transform: uppercase;
+    font-size: x-large;
 }
 input{
-    height: 50px;
+    height: 35px;
     border-radius: 7px;
-    background-color: rgb(233, 233, 233);
+    background-color: #e5e5e5;
+    border-color: #e5e5e5;
+    border: none;
+}
+input:focus{
+    background-color: rgb(255, 255, 255);
+}
+label{
+ font-weight: bolder;
+    color: rgb(93, 93, 93);
 }
 .container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 800px;    
+    width: 37%; 
+    height: 80%;   
     height: auto;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 1rem;
 }
 .formulaire{
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    padding: 20px;
+    width: 77%;
+    /* margin: 10px; */
 }
 .formWidget{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5%;
-    width: 90%;
+    width: 100%;
+    margin-top: 40px;
+}
+.formWidget > label{
+    width: 20%;
+    margin-right: 10px;
 }
 .formWidget > input{
     width: 80%;
@@ -54,6 +76,7 @@ input{
 .titre{
     background-color: black;
     width: 100%;
+    border-radius: 1rem 1rem 0rem 0;
 }
 
 .labelFirstName{
@@ -65,15 +88,98 @@ input{
     display: flex;
     flex-direction: column-reverse;
     width: 40%;
+    margin-left: 10px;
 }
 .labelArea{
     display: flex;
     flex-direction: column-reverse;
-    justify-content: flex-start;
-    align-items: flex-start;
+    width: 20%;
 }
 .labelPhoneNumber{
     display: flex;
     flex-direction: column-reverse;
+    width: 59%;
+    margin-left: 10px;
+}
+.greyLabel{
+    color: grey;
+    font-size: 12px;
+    margin-top: 5px;
+}
+select{
+    height: 35px;
+    border-radius: 7px;
+    background-color: #e5e5e5;
+    border: none;
+    color: grey;
+}
+.formWidget > select{
+    width: 81%;
+}
+.radioList{
+    text-align: left;
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+.radioList>p{
+    width: 100%;
+    font-weight: bolder;
+    color: rgb(93, 93, 93);
+}
+.optionRadio{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+.radioLabel{
+    font-weight: 100;
+    margin: 10px;
 }
 
+button{
+    background-color: #ff4b5a;
+    color: white;
+    padding: 1rem;
+    border-radius: 7px;
+    width: 150px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border: none;
+}
+.radioStyle{
+    background-color: green;
+    color: greenyellow;
+}
+
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: 6px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: 6px;
+    left: -1px;
+    position: relative;
+    background-color: #57b846;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
