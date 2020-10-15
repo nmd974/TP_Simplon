@@ -3,7 +3,7 @@ const pattern_mail = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@
 // const icone_warning = 'U+026A0';
 var value_existing_customer = "";
 const pattern_number = new RegExp("[0-9]{10}");
-// const pattern_general = new RegExp(/^[<>]/g);
+const pattern_general = new RegExp(/[^<->]/);
 
 $(document).ready(() => {
     $('#register').on('click', () => {
@@ -61,29 +61,39 @@ $(document).ready(() => {
             valid_forms = false;
         }
 
-        if(valid_forms){
-            console.log("HERE");
-            if(value_existing_customer === "Yes"){
-                value_existing_customer = true;
+        if(pattern_general.test($('#firstname').val()) || pattern_general.test($('#lastname').val()) || 
+            pattern_general.test($('#company_name').val()) ||
+            pattern_general.test($('#email').val()) ||
+            pattern_general.test($('#areaZone').val()) ||
+            pattern_general.test($('#phone_number').val())
+            ){
+            console.log("Something went wrong");
+        }else{
+            if(valid_forms){
+                console.log("HERE");
+                if(value_existing_customer === "Yes"){
+                    value_existing_customer = true;
+                }
+                if(value_existing_customer === "No"){
+                    value_existing_customer = false;
+                }
+                var content = {
+                    id: 1,
+                    firstname: $('#firstname').val(),
+                    lastname: $('#lastname').val(),
+                    company: $('#company_name').val(),
+                    email: $('#email').val(),
+                    phone : {
+                        area: $('#areaZone').val(),
+                        number: $('#phone_number').val()
+                    },
+                    subject: $('#subject').val(),
+                    already_client: value_existing_customer
+                }
+                console.log("contenu :", content);
             }
-            if(value_existing_customer === "No"){
-                value_existing_customer = false;
-            }
-            var content = {
-                id: 1,
-                firstname: $('#firstname').val(),
-                lastname: $('#lastname').val(),
-                company: $('#company_name').val(),
-                email: $('#email').val(),
-                phone : {
-                    area: $('#areaZone').val(),
-                    number: $('#phone_number').val()
-                },
-                subject: $('#subject').val(),
-                already_client: value_existing_customer
-            }
-            console.log("contenu :", content);
         }
+
 
     })
 })
