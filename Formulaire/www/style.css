@@ -33,7 +33,8 @@ input{
     border: none;
 }
 input:focus{
-    background-color: rgb(255, 255, 255);
+    background-color: #acacac;
+    outline: none;
 }
 label{
  font-weight: bolder;
@@ -75,6 +76,7 @@ label{
 }
 .labelSpecial{
     margin-top: -15px;
+    width: 20%;
 }
 .titre{
     background-color: black;
@@ -114,6 +116,7 @@ select{
     background-color: #e5e5e5;
     border: none;
     color: grey;
+    outline: none;
 }
 .formWidget > select{
     width: 81%;
@@ -184,6 +187,7 @@ input[type='radio']:checked:after {
 .errorMail{
     margin-left: 22%;
     color: red;
+    display: none;
 }
 /* 
 input:invalid {
@@ -193,8 +197,12 @@ input:invalid {
   input:valid {
     border: 1px solid greenyellow;
   } */
-
-@media (max-width: 750px){
+span{
+    color: green;
+font-size: 1.5rem;
+margin-left: 2%;
+}
+@media (max-width: 992px){
     html{
         height: auto;
     }
