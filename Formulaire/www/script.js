@@ -4,19 +4,20 @@ const pattern_mail = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@
 var value_existing_customer = "";
 const pattern_number = new RegExp("[0-9]{10}");
 const pattern_general = new RegExp(/[^<->]/);
+const pattern_name = new RegExp("\\w");
 
 $(document).ready(() => {
     $('#register').on('click', () => {
         var valid_forms = true;
         //Verification de chaque widgets du formulaire
         //Name :
-        if($('#firstname').val() === ""){
+        if($('#firstname').val() === "" || !pattern_name.test($('#firstname').val())){
             $('#firstname').css('border', '2px solid red');
             $('#firstname').css('color', 'red');
             $('#firstname').val("Indiquez votre prenom");
             valid_forms = false;
         }
-        if($('#lastname').val() === ""){
+        if($('#lastname').val() === "" || !pattern_name.test($('#lastname').val())){
             $('#lastname').css('border', '2px solid red');
             $('#lastname').css('color', 'red');
             $('#lastname').val("Indiquez votre nom");
@@ -44,7 +45,7 @@ $(document).ready(() => {
             $('#areaZone').val(`Zone`);
             valid_forms = false;
         }
-        if($('#phone_number').val() === "" || $('#phone_number').val().length < 10){
+        if($('#phone_number').val() === "" || !pattern_number.test($('#phone_number').val())){
             $('#phone_number').css('border', '2px solid red');
             $('#phone_number').css('color', 'red');
             if($('#phone_number').val() === ""){
@@ -97,7 +98,13 @@ $(document).ready(() => {
 
     })
 })
-
+$('#email').on("keyup", function (event) {
+    if($('#email').validity.typeMismatch) {
+        $('#email').setCustomValidity("J'attend un e-mail, mon cher !");
+    } else {
+        $('#email').setCustomValidity("");
+    }
+  });
 //Gestion de la selection du sujet
 $('#subject_choice').on('click', 'select', () => {
 
