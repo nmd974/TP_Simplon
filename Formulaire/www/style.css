@@ -206,9 +206,17 @@ margin-left: 2%;
     html{
         height: auto;
     }
+    .labelFirstName{
+        width: 100%;
+
+    }
     .container{
         width: 95%;
         margin-bottom: 35px;
+    }
+    .labelLastName{
+        width: 100%;
+        margin-left: 0;
     }
     .formWidget{
         flex-wrap: wrap;
