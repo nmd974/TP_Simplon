@@ -9,8 +9,6 @@ html,body{
     padding: 0;
     color: cornsilk;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
     align-items: center;
     background-image: url(./fondcv.png);
     background-repeat: repeat;
@@ -18,6 +16,7 @@ html,body{
     font-family: 'mapolice';
     font-size: small;
     overflow: auto;
+    letter-spacing: .3rem;
 }
 
 h2{color: blueviolet;}
@@ -32,4 +31,35 @@ h1{
 }
 h1:hover{
     box-shadow: 10px 10px 10px rgb(71, 71, 71);
+}
+.container{
+    height: 100%;
+}
+
+.barre{
+    width: 200px;
+    height: 100%;
+    background-image: linear-gradient(white, red);
+}
+.container_titre{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.container_content{
+    display: flex;
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+li{
+    margin-top: 1rem;
 }
