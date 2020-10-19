@@ -63,3 +63,12 @@ section{
 li{
     margin-top: 1rem;
 }
+
+@media (max-width: 762px){
+    section{
+        flex-direction: row;
+    }
+    .barre{
+        display: none;
+    }
+}
