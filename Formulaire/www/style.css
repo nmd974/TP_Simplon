@@ -117,6 +117,7 @@ select{
     border: none;
     color: grey;
     outline: none;
+    cursor: pointer;
 }
 .formWidget > select{
     width: 81%;
@@ -155,7 +156,7 @@ button{
     margin-bottom: 70px;
     border: none;
 }
-
+/*On peut aussi enlever l'apparence de base des naviguateur puis on créé à nouveau le rond avec ce que l'on souhaite cf vincent*/
 input[type='radio']:after {
     width: 15px;
     height: 15px;

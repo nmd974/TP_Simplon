@@ -98,13 +98,7 @@ $(document).ready(() => {
 
     })
 })
-$('#email').on("keyup", function (event) {
-    if($('#email').validity.typeMismatch) {
-        $('#email').setCustomValidity("J'attend un e-mail, mon cher !");
-    } else {
-        $('#email').setCustomValidity("");
-    }
-  });
+
 //Gestion de la selection du sujet
 $('#subject_choice').on('click', 'select', () => {
 
