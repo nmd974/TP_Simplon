@@ -1,0 +1,36 @@
+html,body{
+  height: 100%;
+  background: black;
+}
+.content1{
+
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  animation: changeColor 2s infinite;
+  animation-play-state: paused;
+ 
+}
+
+.animate{
+  animation: changeColor 2s infinite;
+}
+.content2{
+
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  animation: changeColor 2s infinite;
+  animation-delay: 1s;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(40, 1fr);
+  grid-template-rows: repeat(40, 1fr);
+}
+
+@keyframes changeColor{
+  from{background: black;}
+  50%{background: green;}
+  to{background: black;}
+}
