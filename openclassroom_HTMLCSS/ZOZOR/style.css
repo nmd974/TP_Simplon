@@ -135,6 +135,9 @@ nav a:hover
     display: flex;
 
 }
+#none{
+    display: none;
+}
 .article_titre h3{
     text-transform: uppercase;
 }
@@ -195,7 +198,7 @@ footer{
     justify-content: center;
     align-items: center;
 }
-footer h5{
+footer h4{
     text-transform: uppercase;
     font-size: 1.1rem;
 }
