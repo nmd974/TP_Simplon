@@ -1,10 +1,10 @@
 // Based on 'JPEG Raster' by Jonathan Puckey:
 // http://www.flickr.com/photos/puckey/3179779686/in/photostream/
 
-var random = Math.floor(Math.random() * (2 - 1) + 1); 
+var random = Math.round(Math.random() * (4 - 1) + 1); 
 // Create a raster item:
 console.log(random);
-if(random === 2){
+if(random >= 2){
 	var raster = new Raster('/image2.jpg');
 }else{
 	var raster = new Raster('/image1.jpg');
