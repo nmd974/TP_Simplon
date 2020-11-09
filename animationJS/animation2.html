@@ -13,31 +13,18 @@
     <!-- Load the Paper.js library -->
 <script type="text/javascript" src="./js/paper.js"></script>
 <!-- Load external PaperScript and associate it with myCanvas -->
-<script type="text/paperscript" src="./script-image.js" canvas="img">
+<script type="text/paperscript" src="./script.js" canvas="myCanvas">
     
 </script>
 
 
 </head>
 <body>
-    <canvas id="img" class="container-fluid h-100 first"></canvas>
-    <div class="d-flex flex-column w-100">
-        <div>
-            Que suis je ?
-        </div>
-        <div class="container">
-            <button><a href="animation2.html">NEXT</a></button>
-        </div>
-        <div>
-            Press 
-            <button>CTRL</button>
-            +
-            <button>SHIFT</button>
-            +
-            <button>i</button>
-        </div>
+    <canvas id="myCanvas" class="canvas1"></canvas>
+    <div class="container">
+        <button><a href="index.html">PREVIOUS</a></button>
     </div>
-    
+
     <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
     <script src="script.js"></script>
     <script src="./dom-animator.js"></script>
