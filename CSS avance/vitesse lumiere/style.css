@@ -1,36 +1,71 @@
 html,body{
   height: 100%;
   background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.content1{
-
-  border-radius: 100%;
-  width: 20px;
-  height: 20px;
-  animation: changeColor 2s infinite;
-  animation-play-state: paused;
- 
+.container1{
+  padding: 10px;
+  position: absolute;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  transform-style: preserve-3d;
+  transform: rotateX(40deg);
 }
-
-.animate{
-  animation: changeColor 2s infinite;
+.container1{
+  padding: 10px;
+  position: absolute;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  transform-style: preserve-3d;
+  transform: rotateX(40deg);
 }
-.content2{
-
-  border-radius: 100%;
-  width: 20px;
-  height: 20px;
-  animation: changeColor 2s infinite;
-  animation-delay: 1s;
+.container2{
+  padding: 10px;
+  position: absolute;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  transform-style: preserve-3d;
+  transform: rotateX(45deg);
 }
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(40, 1fr);
-  grid-template-rows: repeat(40, 1fr);
+.container3{
+  padding: 10px;
+  position: absolute;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  transform-style: preserve-3d;
+  transform: rotateX(50deg);
 }
-
-@keyframes changeColor{
-  from{background: black;}
-  50%{background: green;}
-  to{background: black;}
+.container4{
+  padding: 10px;
+  position: absolute;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  transform-style: preserve-3d;
+  transform: rotateX(60deg);
+}
+.container5{
+  padding: 10px;
+  position: absolute;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  transform-style: preserve-3d;
+  transform: rotateX(140deg);
+}
+.container6{
+  padding: 10px;
+  position: absolute;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  transform-style: preserve-3d;
+  transform: rotateX(-85deg);
+}
+.container{
+  position: relative;
+  height: 1px;
+  width: 10px;
+  margin-left: 60px;
+  border: 1px solid blue;
+  perspective: 10px;
 }
